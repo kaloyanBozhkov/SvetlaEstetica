@@ -1,0 +1,26 @@
+{
+  "name": "svetlaestetica",
+  "version": "1.0.0",
+  "description": "a MERN stack based ecommerce website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaloyanBozhkov/SvetlaEstetica.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express",
+    "React",
+    "Node",
+    "Next"
+  ],
+  "author": "Kaloyan Bozhkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaloyanBozhkov/SvetlaEstetica/issues"
+  },
+  "homepage": "https://github.com/kaloyanBozhkov/SvetlaEstetica#readme"
+}
