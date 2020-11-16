@@ -1,0 +1,47 @@
+.menuBtn {
+    position: relative;
+    &::before, &::after {
+        transition: .3s;
+        transition-delay: .4s; // match open/close of menu
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 1rem;
+        right: 1rem;
+        background-color: #4B4B4B;
+    }
+
+    &::before {
+        top: 1.25rem;
+    }
+
+    &::after {
+        bottom: 1.25rem;
+    }
+
+    > div {
+        opacity: 1;
+        transition: .15s;
+        transition-delay: .345s; // match open/close of menu
+    }
+
+    &[data-active="true"] {
+        &::before {
+            transform: rotate(45deg);
+            top: 1.9rem;
+        }
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 2rem;
+        }
+        > div {
+            opacity: 0;
+        }
+    }
+}
+
+.wrapper {
+    > * {
+        margin: .5rem;
+    }
+}

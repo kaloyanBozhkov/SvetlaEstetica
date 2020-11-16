@@ -1,0 +1,426 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Header component should render header with default props 1`] = `
+<Flex
+  alignItems="center"
+  backgroundColor="white"
+  boxShadow="0px 0px 5px rgba(0, 0, 0, 0.25)"
+  color="#4B4B4B"
+  height="100%"
+  justifyContent="space-between"
+  paddingLeft={
+    Object {
+      "md": "8",
+      "mdX": "16",
+      "sm": "4",
+      "xs": "2",
+    }
+  }
+  paddingRight={
+    Object {
+      "md": "8",
+      "mdX": "16",
+      "sm": "4",
+      "xs": "2",
+    }
+  }
+  width="100%"
+>
+  <Box
+    alignItems="center"
+    className="menuBtn"
+    cursor="pointer"
+    display={
+      Object {
+        "base": "none",
+        "xs": "flex",
+      }
+    }
+    height="4"
+    marginRight="1"
+    onClick={[Function]}
+    order="-2"
+    padding="2"
+    position="relative"
+    width="4"
+  >
+    <Box
+      bg="background.800"
+      height="1px"
+      width="100%"
+    />
+  </Box>
+  <Flex
+    alignItems={
+      Object {
+        "base": "flex-start",
+        "xs": "center",
+      }
+    }
+    flex={
+      Object {
+        "base": "none",
+        "xs": "1",
+      }
+    }
+    flexDirection="column"
+    height="6xl"
+    justifyContent="center"
+    marginRight="1"
+  >
+    <Heading
+      fontSize={
+        Object {
+          "mdX": "xl",
+          "xs": "lg",
+        }
+      }
+      lineHeight={
+        Object {
+          "md": "wider",
+          "xs": "tighter",
+        }
+      }
+    >
+      SvetlaEstetica
+    </Heading>
+    <Text
+      fontSize={
+        Object {
+          "md": "xs",
+          "mdX": "md",
+          "xs": "xxs",
+        }
+      }
+    >
+      Viale Natale Betelli, 51 - Dalmine (BG)
+    </Text>
+  </Flex>
+  <Flex
+    alignItems={
+      Object {
+        "base": "unset",
+        "xs": "flex-start",
+      }
+    }
+    as="nav"
+    bg={
+      Object {
+        "base": "none",
+        "xs": "white",
+      }
+    }
+    borderColor="background.200"
+    borderRight={
+      Object {
+        "base": "none",
+        "xs": "1px solid",
+      }
+    }
+    bottom="0"
+    flex="1"
+    flexDirection={
+      Object {
+        "base": "row",
+        "xs": "column",
+      }
+    }
+    fontSize="sm"
+    justifyContent={
+      Object {
+        "base": "center",
+        "xs": "flex-start",
+      }
+    }
+    left="0"
+    marginRight="1"
+    position={
+      Object {
+        "base": "relative",
+        "xs": "fixed",
+      }
+    }
+    top="0"
+    transform={
+      Object {
+        "base": "none",
+        "xs": "translateX(-30rem)",
+      }
+    }
+    width={
+      Object {
+        "base": "auto",
+        "xs": "30rem",
+      }
+    }
+    zIndex={
+      Object {
+        "base": "base",
+        "xs": "hidden",
+      }
+    }
+  >
+    <Heading
+      alignItems="center"
+      alignSelf="stretch"
+      borderBottom="1px solid"
+      borderColor="background.200"
+      display={
+        Object {
+          "base": "none",
+          "xs": "flex",
+        }
+      }
+      fontSize="tighter"
+      height="24"
+      justifyContent="center"
+      marginBottom="5"
+      marginLeft="2"
+      marginRight="2"
+    >
+      Menu
+    </Heading>
+    <Button
+      _hover={
+        Object {
+          "bg": "none",
+        }
+      }
+      bg="none"
+      height={
+        Object {
+          "base": "auto",
+          "xs": "4rem",
+        }
+      }
+      marginBottom={
+        Object {
+          "base": "none",
+          "xs": "2",
+        }
+      }
+      width={
+        Object {
+          "base": "13",
+          "xs": "100%",
+        }
+      }
+    >
+      Chi Siamo
+    </Button>
+    <Button
+      _hover={
+        Object {
+          "bg": "none",
+        }
+      }
+      bg="none"
+      height={
+        Object {
+          "base": "auto",
+          "xs": "4rem",
+        }
+      }
+      marginBottom={
+        Object {
+          "base": "none",
+          "xs": "2",
+        }
+      }
+      width={
+        Object {
+          "base": "13",
+          "xs": "100%",
+        }
+      }
+    >
+      Prodotti
+    </Button>
+    <Button
+      _hover={
+        Object {
+          "bg": "none",
+        }
+      }
+      bg="none"
+      height={
+        Object {
+          "base": "auto",
+          "xs": "4rem",
+        }
+      }
+      marginBottom={
+        Object {
+          "base": "none",
+          "xs": "2",
+        }
+      }
+      width={
+        Object {
+          "base": "13",
+          "xs": "100%",
+        }
+      }
+    >
+      Offerte
+    </Button>
+    <Button
+      _hover={
+        Object {
+          "bg": "none",
+        }
+      }
+      bg="none"
+      height={
+        Object {
+          "base": "auto",
+          "xs": "4rem",
+        }
+      }
+      marginBottom={
+        Object {
+          "base": "none",
+          "xs": "2",
+        }
+      }
+      width={
+        Object {
+          "base": "13",
+          "xs": "100%",
+        }
+      }
+    >
+      Trattamenti
+    </Button>
+    <Button
+      _hover={
+        Object {
+          "bg": "none",
+        }
+      }
+      bg="none"
+      height={
+        Object {
+          "base": "auto",
+          "xs": "4rem",
+        }
+      }
+      marginBottom={
+        Object {
+          "base": "none",
+          "xs": "2",
+        }
+      }
+      width={
+        Object {
+          "base": "13",
+          "xs": "100%",
+        }
+      }
+    >
+      Prenotazione
+    </Button>
+  </Flex>
+  <Button
+    _hover={
+      Object {
+        "bg": "none",
+      }
+    }
+    bg="none"
+    fontSize={
+      Object {
+        "lg": "lg",
+        "md": "md",
+        "xs": "sm",
+      }
+    }
+    height={
+      Object {
+        "md": "4",
+        "xs": "3",
+      }
+    }
+    marginRight="1"
+    width={
+      Object {
+        "md": "4",
+        "xs": "3",
+      }
+    }
+  >
+    <Icon
+      icon="search"
+    />
+  </Button>
+  <Button
+    _hover={
+      Object {
+        "bg": "none",
+      }
+    }
+    bg="none"
+    fontSize={
+      Object {
+        "lg": "lg",
+        "md": "md",
+        "xs": "sm",
+      }
+    }
+    height={
+      Object {
+        "md": "4",
+        "xs": "3",
+      }
+    }
+    marginRight="1"
+    order={
+      Object {
+        "base": "0",
+        "xs": "-1",
+      }
+    }
+    width={
+      Object {
+        "md": "4",
+        "xs": "3",
+      }
+    }
+  >
+    <Icon
+      icon="user"
+    />
+  </Button>
+  <Button
+    _hover={
+      Object {
+        "bg": "none",
+      }
+    }
+    bg="none"
+    fontSize={
+      Object {
+        "lg": "lg",
+        "md": "md",
+        "xs": "sm",
+      }
+    }
+    height={
+      Object {
+        "md": "4",
+        "xs": "3",
+      }
+    }
+    width={
+      Object {
+        "md": "4",
+        "xs": "3",
+      }
+    }
+  >
+    <Icon
+      icon="shopping-bag"
+    />
+  </Button>
+</Flex>
+`;

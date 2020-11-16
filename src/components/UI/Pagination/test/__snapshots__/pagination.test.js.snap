@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing pagination component should render pagination component with default navlink buttons 1`] = `
+<div
+  className="pagination"
+>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="0"
+    to="1"
+  >
+    1
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="1"
+    to="2"
+  >
+    2
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="2"
+    to="3"
+  >
+    3
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="3"
+    to="4"
+  >
+    4
+  </NavLink>
+  <NavLink
+    activeClassName="pagination_activeButton"
+    key="4"
+    to="5"
+  >
+    5
+  </NavLink>
+</div>
+`;
