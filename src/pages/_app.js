@@ -1,37 +1,19 @@
 import React from 'react'
-import NextApp, { Container } from 'next/app'
-import configureStore from '~/../lib/store'
+import { wrapper } from '~/../lib/store.js'
 import withReduxSaga from 'next-redux-saga'
-import withRedux from 'next-redux-wrapper'
+import { PersistGate } from 'redux-persist/integration/react'
+import { useStore } from 'react-redux'
 
-class App extends NextApp {
-
-    static async getInitialProps({ Component, ctx, router }) {
-        console.log('_app ctx', Object.keys(ctx))
-        // Wait for all page actions to dispatch &&  Return props
-        return {
-            pageProps: Component.getInitialProps
-                ? await Component.getInitialProps(ctx)
-                : {},
-        }
-    }
-
-    componentDidCatch() {
-
-    }
-
-    render() {
-        console.log('_app render props', Object.keys(this.props))
-        const { Component: ActivePage, pageProps, store } = this.props
-
-        return (
-            <Container>
-                <ActivePage
-                    {...pageProps}
-                />
-            </Container>
-        )
-    }
+const App = (props) => {
+    const store = useStore((state) => state)
+    const { Component: ActivePage, ...pageProps } = props
+    console.log('_app props', props)
+    console.log('_app store hook', store)
+    return (
+        <PersistGate persistor={store.__persistor}>
+            <ActivePage />
+        </PersistGate>
+    )
 }
 
-export default withRedux(configureStore)(withReduxSaga(App))
+export default wrapper.withRedux(withReduxSaga(App))

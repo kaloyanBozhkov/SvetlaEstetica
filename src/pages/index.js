@@ -3,29 +3,37 @@ import { ThemeProvider } from 'emotion-theming'
 import { CSSReset } from '@chakra-ui/core'
 import App from './App'
 import { localTheme } from 'theme/theme'
+import { wrapper } from '~/../lib/store'
+import { openModal } from 'redux/modal/modal.actions'
 
-class Application extends React.Component {
-    constructor(args) {
-        super()
-        console.log('constructor args', args)
-    }
+import { END } from 'redux-saga'
 
-    static getInitialProps({  store }) {
-        console.log('getInitialProps Index!!', Object.keys(store))
-        return { custom: 'custom', store }
-    }
-
-    render() {
-        console.log('index this', this)
-
-        return (
-            <ThemeProvider theme={localTheme}>
-                <CSSReset />
-                <App />
-            </ThemeProvider>
-        )
-    }
+const Index = (props) => {
+    console.log('index props', props)
+    return (
+        <ThemeProvider theme={localTheme}>
+            <CSSReset />
+            <App />
+        </ThemeProvider>
+    )
 }
 
 
-export default Application
+export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
+    console.log('index getStaticProps', store)
+
+    store.dispatch(openModal('someModal', { subtitle: 'ok' }))
+    store.dispatch(END)
+
+    // if (!store.getState().placeholderData) {
+    //   store.dispatch(loadData())
+    // }
+
+
+    await store.sagaTask.toPromise()
+
+    return {}
+})
+
+
+export default Index
