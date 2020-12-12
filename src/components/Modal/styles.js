@@ -1,4 +1,4 @@
-export default {
+const styles = {
     modalOverlay: {
         position: 'fixed',
         backgroundVolor: 'rgba(0, 0, 0, 0.7)',
@@ -36,3 +36,5 @@ export default {
         fontSize: '1.4rem'
       }
 }
+
+export default styles

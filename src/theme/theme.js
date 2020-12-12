@@ -131,6 +131,7 @@ export const localTheme = {
         32: '12.8rem',
         40: '16rem',
         48: '19.2rem',
+        50: '21.6rem',
         56: '22.4rem',
         64: '25.6rem'
     },

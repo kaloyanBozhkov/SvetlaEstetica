@@ -1,0 +1,53 @@
+//media queries
+/*
+0-600: phone
+600-900px: tablet portrait
+900-1200px: tablet landscape
+1200-1800 normal styles
+1800: big desktop
+*/
+
+/*
+$breakpoint argument choices:
+- mobile
+- tablet-portrait
+- tablet-landscape
+- big-desktop
+*/
+
+//em is best used for media quries as REM doest work if user changes html font size
+//we divide our 600px media query by 1em where 1em = 16px.   600 / 16 = 37.5em for 600px breakpoint.
+
+@mixin breakpoint($breakpoint) {
+    // Desktop design down
+    @if $breakpoint == mobile {
+        @media (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tablet-portrait {
+        @media (max-width: 56.25em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tablet-landscape {
+        @media (max-width: 75em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {
+            @content;
+        }
+    }
+}
+
+@mixin animate($keyframesName, $duration: 300ms, $delay: 0ms, $fillmode: forwards) {
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $keyframesName;
+    animation-fill-mode: $fillmode;
+}

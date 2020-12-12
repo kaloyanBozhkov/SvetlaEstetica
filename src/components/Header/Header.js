@@ -10,7 +10,6 @@ const Header = ({ isMobileMenuOpen, onToggleMobileMenu = (f) => f, onSearchClick
 
     return (
         <Flex {...styles.header}>
-
             <Box
                 className={sassStyles.menuBtn}
                 {...styles.menuBtn}
@@ -21,18 +20,18 @@ const Header = ({ isMobileMenuOpen, onToggleMobileMenu = (f) => f, onSearchClick
                 <Box {...styles.middleMenuBar}/>
             </Box>
 
-            <Flex {...styles.logo} marginRight="1">
-                <Heading {...styles.logoHeading}>SvetlaEstetica</Heading>
-                <Text {...styles.logoSubHeading}>Viale Natale Betelli, 51 - Dalmine (BG)</Text>
-            </Flex>
-
             <Flex as="nav" {...styles.navMenu} marginRight="1">
                 <Heading {...styles.navHeading}>Menu</Heading>
-                <Button {...styles.navBtn}>Chi Siamo</Button>
+                <Button {...styles.navBtn} display="block">Contatti</Button>
                 <Button {...styles.navBtn}>Prodotti</Button>
                 <Button {...styles.navBtn}>Offerte</Button>
                 <Button {...styles.navBtn}>Trattamenti</Button>
                 <Button {...styles.navBtn}>Prenotazione</Button>
+            </Flex>
+
+            <Flex {...styles.logo} marginRight="1">
+                <Heading {...styles.logoHeading}>Svetla Estetica</Heading>
+                <Text {...styles.logoSubHeading}>Viale Natale Betelli, 51 - Dalmine (BG)</Text>
             </Flex>
 
             <Button marginRight="1" {...styles.iconButton} onClick={onSearchClick}><Icon icon="search" /></Button>

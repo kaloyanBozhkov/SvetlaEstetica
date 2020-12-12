@@ -33,12 +33,10 @@ describe('testing Header component', () => {
     })
 
 
-    it('should run search fn', () => {
-        const wrapper = shallow(<Header {...mockProps} />)
-        const menuBtn = wrapper.find('Button')
-        expect)
-    })
-
+    // it('should run search fn', () => {
+    //     const wrapper = shallow(<Header {...mockProps} />)
+    //     const menuBtn = wrapper.find('Button')
+    // })
 
 
     it('should change data active attribute of menu btn based on prop', () => {

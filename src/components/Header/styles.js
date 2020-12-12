@@ -1,4 +1,4 @@
-export default {
+const styles = {
     header: {
         color: '#4B4B4B',
         backgroundColor: 'white',
@@ -10,13 +10,13 @@ export default {
             xs: '2',
             sm: '4',
             md: '8',
-            mdX: '16'
+            base: '50'
         },
         paddingRight: {
             xs: '2',
             sm: '4',
             md: '8',
-            mdX: '16'
+            base: '50'
         },
         boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.25)',
     },
@@ -24,14 +24,8 @@ export default {
         flexDirection: 'column',
         height: '6xl',
         justifyContent: 'center',
-        flex: {
-            xs: '1',
-            base: 'none'
-        },
-        alignItems: {
-            xs: 'center',
-            base: 'flex-start'
-        }
+        flex: '1',
+        alignItems: 'center'
     },
     logoHeading: {
         fontSize: {
@@ -41,9 +35,11 @@ export default {
         lineHeight: {
             xs: 'tighter',
             md: 'wider'
-        }
+        },
+        fontWeight: 'medium'
     },
     logoSubHeading: {
+        color: 'text.400',
         fontSize: {
             xs: 'xxs',
             md: 'xs',
@@ -64,7 +60,6 @@ export default {
             xs: 'flex-start',
             base: 'unset'
         },
-        flex: '1',
         position: {
             xs: 'fixed',
             base: 'relative',
@@ -114,7 +109,16 @@ export default {
         marginBottom: {
             xs: '2',
             base: '0'
-        }
+        },
+        display: {
+            xxs: 'block',
+            base: 'none'
+        },
+        fontWeight: {
+            xs: 'normal',
+            base: 'bold'
+        },
+        fontSize: 'sm'
     },
     navHeading: {
         display: {
@@ -177,3 +181,5 @@ export default {
         bg: 'background.800',
     }
 }
+
+export default styles

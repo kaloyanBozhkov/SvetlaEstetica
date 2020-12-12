@@ -1,46 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`testing modal should render cofirm password modal with expected contents and pass them the expected props 1`] = `
-<Fragment>
+Array [
   <div
-    className="modalOverlay"
-  />
+    className="[object Object] css-0"
+  />,
   <div
-    className="box"
+    className="css-5grkxp"
   >
     <div
-      className="close"
+      className="css-qlehve"
+      data-test-id="closeBtn"
     >
-      <Icon
-        icon="times"
+      <i>
+        Icon not found
+      </i>
+    </div>
+    <div>
+      <div
+        className={
+          Object {
+            "margin": "5 -2 5 -2",
+            "padding": "0 2",
+          }
+        }
+      >
+        <p />
+      </div>
+      <div
+        className={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "height": "3rem",
+            "margin": "-4",
+            "marginTop": "2",
+          }
+        }
       />
     </div>
-    <ConfirmPassword
-      onSave={[Function]}
-      text="hello world"
-    />
-  </div>
-</Fragment>
+  </div>,
+]
 `;
 
 exports[`testing modal should render modal 1`] = `
-<Fragment>
+Array [
   <div
-    className="modalOverlay"
-  />
+    className="[object Object] css-0"
+  />,
   <div
-    className="box"
+    className="css-5grkxp"
   >
     <div
-      className="close"
+      className="css-qlehve"
+      data-test-id="closeBtn"
     >
-      <Icon
-        icon="times"
-      />
+      <i>
+        Icon not found
+      </i>
     </div>
-    <p>
+    <p
+      className="css-18poma1"
+      data-test-id="emptyMsg"
+    >
       Modal is empty, not configured!
     </p>
-  </div>
-</Fragment>
+  </div>,
+]
 `;

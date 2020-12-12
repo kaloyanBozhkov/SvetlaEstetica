@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tesitng search component should render component w default params 1`] = `
+<Flex
+  bg="white"
+  paddingTop="22"
+>
+  <Flex
+    borderBottom="1px solid"
+    borderBottomColor="neutral.100"
+    h="min-content"
+    w="100%"
+  >
+    <Input
+      as="input"
+      border="none"
+      data-test-id="input"
+      errorBorderColor="red.500"
+      focusBorderColor="blue.500"
+      height="8rem"
+      isFullWidth={true}
+      name="search"
+      onChange={[Function]}
+      placeholder="search by typing.. (write 'test' to fall back to stubs)"
+      size="md"
+      textTransform="capitalize"
+      value=""
+      variant="outline"
+    />
+    <Flex
+      alignItems="center"
+      padding="2"
+    >
+      <Button
+        bg="none"
+        data-test-id="clearSearchBtn"
+        onClick={[Function]}
+      >
+        clear search
+      </Button>
+    </Flex>
+    <Flex
+      alignItems="center"
+      padding="4"
+    >
+      <Button
+        bg="none"
+        data-test-id="closeSearchBtn"
+        onClick={[Function]}
+      >
+        <Icon
+          icon="times"
+        />
+      </Button>
+    </Flex>
+  </Flex>
+</Flex>
+`;

@@ -1,8 +1,16 @@
 import React from 'react'
-// Load components
+import { connect } from 'react-redux'
+
+
+// Load template
 import Layout from 'templates/LayoutBase'
+
+// Load components
 import Modal from 'components/Modal/Modal'
 import Header from 'components/Header/Header'
+
+// Load actions
+import { closeModal } from 'redux/modal/modal.actions'
 
 class App extends React.Component {
 
@@ -13,10 +21,17 @@ class App extends React.Component {
 
     toggleMenu = () => this.setState({ menuOpen: !this.state.menuOpen })
 
-    render(args) {
-        console.log('App this', this)
-        
-        console.log('App args', args)
+    render() {
+
+        const { 
+            state: {
+
+            },
+            props: {
+                modal = null
+            },
+            onCloseModal = (f) => f
+        } = this
         
         const header = (
             <Header
@@ -27,7 +42,7 @@ class App extends React.Component {
 
         return (
             <>
-                <Modal />
+                {modal && <Modal {...modal} onCloseModal={onCloseModal} />}
                 <Layout header={header} isMobileMenuOpen={this.state.menuOpen}>
                     {/* Routes here */}
                 </Layout>
@@ -36,4 +51,12 @@ class App extends React.Component {
     }
 }
 
-export default App
+const mapStateToProps = (state) => ({
+    modal: state.modalReducer.modal,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    onCloseModal: () => dispatch(closeModal())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

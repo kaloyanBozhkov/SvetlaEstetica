@@ -21,7 +21,7 @@
                 "@babel/plugin-proposal-do-expressions",
             ],
             "only": [
-                "./∗∗/∗.js",
+                "src/*",
                 "node_modules/jest-runtime"
             ]
         }

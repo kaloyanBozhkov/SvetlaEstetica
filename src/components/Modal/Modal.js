@@ -6,6 +6,7 @@ import Icon from 'UI/Icon/Icon'
 
 import Confirm from './Confirm/Confirm'
 import ErrorModal from './ErrorModal/ErrorModal'
+import { Box, Text } from '@chakra-ui/core'
 
 /**
  * @param  {string} {openedModal -> name of modal to open
@@ -67,20 +68,20 @@ export const Modal = ({ modal, data = {}, onCloseModal }) => {
       break
     }
     default:
-      content = <p>Modal is empty, not configured!</p>
+      content = <Text data-test-id="emptyMsg">Modal is empty, not configured!</Text>
       break
   }
 
   return (
     <>
-      <div className={styles.modalOverlay} />
-      <div className={[styles.box, (modalModifier && styles[modalModifier]) || undefined].join(' ').trim()}>
-        {modalLabel && <p className={styles.title}>{modalLabel}</p>}
-        <div className={styles.close} onClick={onCloseModal}>
+      <Box className={styles.modalOverlay} />
+      <Box {...styles.box} {...(modalModifier ? styles[modalModifier] : {})}>
+        {modalLabel && <p {...styles.title}>{modalLabel}</p>}
+        <Box data-test-id="closeBtn" onClick={onCloseModal} {...styles.close} >
           <Icon icon="close" />
-        </div>
+        </Box>
         {content}
-      </div>
+      </Box>
     </>
   )
 }

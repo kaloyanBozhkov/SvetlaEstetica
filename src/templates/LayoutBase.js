@@ -7,6 +7,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         transition: '.3s',
+        h: '100%'
     },
     header: {
         height: '24',
@@ -14,10 +15,19 @@ const styles = {
         top: 0,
         left: 0,
         right: 0,
+        zIndex: 'header'
     },
     main: {
         flex: 1,
-
+        marginTop: '22',
+    },
+    overlay: {
+        w: '100%',
+        h: '100%',
+        position: 'fixed',
+        zIndex: 'overlay',
+        top: 0,
+        left: 0,
     },
     cart: {
         width: '60',
@@ -31,13 +41,14 @@ const styles = {
     },
 }
 
-const LayoutGeneral = ({ children, header, cart, isMobileMenuOpen, isCheckoutOpen = false }) => {
+const LayoutGeneral = ({ children, header, cart, overlay, isMobileMenuOpen, isCheckoutOpen = false }) => {
     return (
         <Box
             {...styles.wrapper}
             {...(isCheckoutOpen ? styles.checkoutOpen : {})}
             {...(isMobileMenuOpen ? styles.leftMenuOpen : {})}
-        >
+        >   
+            {overlay && <Box {...styles.overlay}>{overlay}</Box>}
             <Box as="header" {...styles.header}>
                 {header}
             </Box>

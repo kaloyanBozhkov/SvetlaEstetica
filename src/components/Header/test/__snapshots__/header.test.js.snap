@@ -10,16 +10,16 @@ exports[`testing Header component should render header with default props 1`] = 
   justifyContent="space-between"
   paddingLeft={
     Object {
+      "base": "50",
       "md": "8",
-      "mdX": "16",
       "sm": "4",
       "xs": "2",
     }
   }
   paddingRight={
     Object {
+      "base": "50",
       "md": "8",
-      "mdX": "16",
       "sm": "4",
       "xs": "2",
     }
@@ -53,52 +53,6 @@ exports[`testing Header component should render header with default props 1`] = 
   <Flex
     alignItems={
       Object {
-        "base": "flex-start",
-        "xs": "center",
-      }
-    }
-    flex={
-      Object {
-        "base": "none",
-        "xs": "1",
-      }
-    }
-    flexDirection="column"
-    height="6xl"
-    justifyContent="center"
-    marginRight="1"
-  >
-    <Heading
-      fontSize={
-        Object {
-          "mdX": "xl",
-          "xs": "lg",
-        }
-      }
-      lineHeight={
-        Object {
-          "md": "wider",
-          "xs": "tighter",
-        }
-      }
-    >
-      SvetlaEstetica
-    </Heading>
-    <Text
-      fontSize={
-        Object {
-          "md": "xs",
-          "mdX": "md",
-          "xs": "xxs",
-        }
-      }
-    >
-      Viale Natale Betelli, 51 - Dalmine (BG)
-    </Text>
-  </Flex>
-  <Flex
-    alignItems={
-      Object {
         "base": "unset",
         "xs": "flex-start",
       }
@@ -106,7 +60,7 @@ exports[`testing Header component should render header with default props 1`] = 
     as="nav"
     bg={
       Object {
-        "base": "none",
+        "base": "unset",
         "xs": "white",
       }
     }
@@ -118,7 +72,6 @@ exports[`testing Header component should render header with default props 1`] = 
       }
     }
     bottom="0"
-    flex="1"
     flexDirection={
       Object {
         "base": "row",
@@ -126,6 +79,12 @@ exports[`testing Header component should render header with default props 1`] = 
       }
     }
     fontSize="sm"
+    height={
+      Object {
+        "base": "100%",
+        "xs": "100vh",
+      }
+    }
     justifyContent={
       Object {
         "base": "center",
@@ -144,7 +103,7 @@ exports[`testing Header component should render header with default props 1`] = 
     transform={
       Object {
         "base": "none",
-        "xs": "translateX(-30rem)",
+        "xs": "translateX(-100%)",
       }
     }
     width={
@@ -156,7 +115,7 @@ exports[`testing Header component should render header with default props 1`] = 
     zIndex={
       Object {
         "base": "base",
-        "xs": "hidden",
+        "xs": "hide",
       }
     }
   >
@@ -183,19 +142,27 @@ exports[`testing Header component should render header with default props 1`] = 
     <Button
       _hover={
         Object {
-          "bg": "none",
+          "bg": "unset",
         }
       }
-      bg="none"
+      bg="unset"
+      display="block"
+      fontSize="sm"
+      fontWeight={
+        Object {
+          "base": "bold",
+          "xs": "normal",
+        }
+      }
       height={
         Object {
-          "base": "auto",
+          "base": "100%",
           "xs": "4rem",
         }
       }
       marginBottom={
         Object {
-          "base": "none",
+          "base": "0",
           "xs": "2",
         }
       }
@@ -206,24 +173,37 @@ exports[`testing Header component should render header with default props 1`] = 
         }
       }
     >
-      Chi Siamo
+      Contatti
     </Button>
     <Button
       _hover={
         Object {
-          "bg": "none",
+          "bg": "unset",
         }
       }
-      bg="none"
+      bg="unset"
+      display={
+        Object {
+          "base": "none",
+          "xxs": "block",
+        }
+      }
+      fontSize="sm"
+      fontWeight={
+        Object {
+          "base": "bold",
+          "xs": "normal",
+        }
+      }
       height={
         Object {
-          "base": "auto",
+          "base": "100%",
           "xs": "4rem",
         }
       }
       marginBottom={
         Object {
-          "base": "none",
+          "base": "0",
           "xs": "2",
         }
       }
@@ -239,19 +219,32 @@ exports[`testing Header component should render header with default props 1`] = 
     <Button
       _hover={
         Object {
-          "bg": "none",
+          "bg": "unset",
         }
       }
-      bg="none"
+      bg="unset"
+      display={
+        Object {
+          "base": "none",
+          "xxs": "block",
+        }
+      }
+      fontSize="sm"
+      fontWeight={
+        Object {
+          "base": "bold",
+          "xs": "normal",
+        }
+      }
       height={
         Object {
-          "base": "auto",
+          "base": "100%",
           "xs": "4rem",
         }
       }
       marginBottom={
         Object {
-          "base": "none",
+          "base": "0",
           "xs": "2",
         }
       }
@@ -267,19 +260,32 @@ exports[`testing Header component should render header with default props 1`] = 
     <Button
       _hover={
         Object {
-          "bg": "none",
+          "bg": "unset",
         }
       }
-      bg="none"
+      bg="unset"
+      display={
+        Object {
+          "base": "none",
+          "xxs": "block",
+        }
+      }
+      fontSize="sm"
+      fontWeight={
+        Object {
+          "base": "bold",
+          "xs": "normal",
+        }
+      }
       height={
         Object {
-          "base": "auto",
+          "base": "100%",
           "xs": "4rem",
         }
       }
       marginBottom={
         Object {
-          "base": "none",
+          "base": "0",
           "xs": "2",
         }
       }
@@ -295,19 +301,32 @@ exports[`testing Header component should render header with default props 1`] = 
     <Button
       _hover={
         Object {
-          "bg": "none",
+          "bg": "unset",
         }
       }
-      bg="none"
+      bg="unset"
+      display={
+        Object {
+          "base": "none",
+          "xxs": "block",
+        }
+      }
+      fontSize="sm"
+      fontWeight={
+        Object {
+          "base": "bold",
+          "xs": "normal",
+        }
+      }
       height={
         Object {
-          "base": "auto",
+          "base": "100%",
           "xs": "4rem",
         }
       }
       marginBottom={
         Object {
-          "base": "none",
+          "base": "0",
           "xs": "2",
         }
       }
@@ -321,13 +340,51 @@ exports[`testing Header component should render header with default props 1`] = 
       Prenotazione
     </Button>
   </Flex>
+  <Flex
+    alignItems="center"
+    flex="1"
+    flexDirection="column"
+    height="6xl"
+    justifyContent="center"
+    marginRight="1"
+  >
+    <Heading
+      fontSize={
+        Object {
+          "mdX": "xl",
+          "xs": "lg",
+        }
+      }
+      fontWeight="medium"
+      lineHeight={
+        Object {
+          "md": "wider",
+          "xs": "tighter",
+        }
+      }
+    >
+      Svetla Estetica
+    </Heading>
+    <Text
+      color="text.400"
+      fontSize={
+        Object {
+          "md": "xs",
+          "mdX": "md",
+          "xs": "xxs",
+        }
+      }
+    >
+      Viale Natale Betelli, 51 - Dalmine (BG)
+    </Text>
+  </Flex>
   <Button
     _hover={
       Object {
-        "bg": "none",
+        "bg": "unset",
       }
     }
-    bg="none"
+    bg="unset"
     fontSize={
       Object {
         "lg": "lg",
@@ -342,6 +399,7 @@ exports[`testing Header component should render header with default props 1`] = 
       }
     }
     marginRight="1"
+    onClick={[Function]}
     width={
       Object {
         "md": "4",
@@ -356,10 +414,10 @@ exports[`testing Header component should render header with default props 1`] = 
   <Button
     _hover={
       Object {
-        "bg": "none",
+        "bg": "unset",
       }
     }
-    bg="none"
+    bg="unset"
     fontSize={
       Object {
         "lg": "lg",
@@ -374,6 +432,7 @@ exports[`testing Header component should render header with default props 1`] = 
       }
     }
     marginRight="1"
+    onClick={[Function]}
     order={
       Object {
         "base": "0",
@@ -394,10 +453,10 @@ exports[`testing Header component should render header with default props 1`] = 
   <Button
     _hover={
       Object {
-        "bg": "none",
+        "bg": "unset",
       }
     }
-    bg="none"
+    bg="unset"
     fontSize={
       Object {
         "lg": "lg",
@@ -411,6 +470,7 @@ exports[`testing Header component should render header with default props 1`] = 
         "xs": "3",
       }
     }
+    onClick={[Function]}
     width={
       Object {
         "md": "4",
