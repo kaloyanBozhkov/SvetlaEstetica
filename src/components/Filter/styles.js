@@ -5,16 +5,31 @@ const styles = {
             base: 'row'
         },
         justifyContent: 'space-between',
+        alignItems: {
+            xs: 'center',
+            base: 'stretch',
+        },
         color: 'white',
         fontSize: 'lg',
         fontWeight: 'normal',
         lineHeight: 'tight',
-        marginTop: '1rem'
+        marginTop: {
+            xs: '2rem',
+            base: '1rem'
+        }
     },
     categorySelectWrapper: {
+        w: {
+            xs: '30rem',
+            base: 'auto'
+        },
         gridTemplateColumns: '1fr 1fr',
         gap: '1rem',
         alignItems: 'center',
+        margin: { 
+            xs: '1rem',
+            base: '0'
+        }
     },
     selectCategory: {
         background: 'none',
@@ -31,7 +46,14 @@ const styles = {
         padding: '0',
     },
     priceRangeWrapper: {
-        width: '20rem',
+        w: {
+            xs: '30rem',
+            base: '18.5rem'
+        },
+        margin: { 
+            xs: '1rem',
+            base: '0'
+        },
         gridTemplateColumns: '1fr minmax(12rem, 1fr)',
         gap: '1rem',
         alignItems: 'center',
