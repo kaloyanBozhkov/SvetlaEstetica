@@ -1,29 +1,19 @@
 import React from 'react'
 
-// import Home page
-import HomePage from './Home/Home.page'
-
-import { useRouter } from 'next/router'
-
 // import store wrapper
 import { wrapper } from 'lib/store'
+import OffersPage from './Offers/Offers.page'
 
-// Load context providers that feed server fetched data to app
-
-
-const Index = (props) => {
-    const router = useRouter()
+const Offers = (props) => {
     
-    console.log('index/home props', props)
-
     return (
-        <HomePage />
+        <OffersPage {...props} />
     )
 }
 
 
 export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
-    console.log('index getStaticProps', store)
+    console.log('offers getStaticProps', store)
 
     // store.dispatch(openModal('someModal', { subtitle: 'ok' }))
     // store.dispatch(END)
@@ -39,4 +29,4 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
 })
 
 
-export default Index
+export default Offers

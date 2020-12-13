@@ -12,21 +12,26 @@ import { CSSReset } from '@chakra-ui/core'
 
 import 'theme/general.scss'
 
-const App = (props) => {
+// import main App wrapper with layour, header, menu etc.. which are present on app pages
+import App from './App'
+
+const Application = (props) => {
     const store = useStore()
     const { Component: ActivePage, ...pageProps } = props
 
     return (
         <PersistGate persistor={store.__persistor}>
-        <ThemeProvider theme={localTheme}>
-            <CSSReset />
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </Head>
-            <ActivePage {...pageProps} store={store} />
-        </ThemeProvider>
-    </PersistGate>
+            <ThemeProvider theme={localTheme}>
+                <CSSReset />
+                <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                </Head>
+                <App>
+                    <ActivePage {...pageProps} store={store} />
+                </App>
+            </ThemeProvider>
+        </PersistGate>
     )
 }
 
-export default wrapper.withRedux(withReduxSaga(App))
+export default wrapper.withRedux(withReduxSaga(Application))

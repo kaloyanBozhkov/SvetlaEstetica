@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'next/router'
+import { compose } from 'redux'
 
 
 // Load template
@@ -23,7 +25,7 @@ class App extends React.Component {
 
     render() {
 
-        const { 
+        const {
             state: {
 
             },
@@ -32,19 +34,19 @@ class App extends React.Component {
             },
             onCloseModal = (f) => f
         } = this
-        
+
         const header = (
             <Header
                 isMobileMenuOpen={this.state.menuOpen}
                 onToggleMobileMenu={this.toggleMenu}
             />
         )
-
+            console.log(this.props)
         return (
             <>
                 {modal && <Modal {...modal} onCloseModal={onCloseModal} />}
                 <Layout header={header} isMobileMenuOpen={this.state.menuOpen}>
-                    {/* Routes here */}
+                    {this.props.children}
                 </Layout>
             </>
         )
@@ -59,4 +61,7 @@ const mapDispatchToProps = (dispatch) => ({
     onCloseModal: () => dispatch(closeModal())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    withRouter
+)(App)

@@ -35,6 +35,8 @@ html {
 
 html,
 body,
+
+// @TODO Koko figure out why #__next is not being targeted, and we gotta do style jsx global on _document instead
 #__next {
     height: 100%;
     width: 100%;

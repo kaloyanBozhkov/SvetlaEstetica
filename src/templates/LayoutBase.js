@@ -19,7 +19,7 @@ const styles = {
     },
     main: {
         flex: 1,
-        marginTop: '22',
+        paddingTop: '10rem',
     },
     overlay: {
         w: '100%',
