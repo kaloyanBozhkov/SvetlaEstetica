@@ -64,7 +64,8 @@ export const localTheme = {
         },
         text: {
             900: '#4B4B4B',
-            400: '#BBBBBB'
+            400: '#BBBBBB',
+            300: '#e2e2e2'
         },
         white: '#FFFFFF'
 
@@ -82,7 +83,8 @@ export const localTheme = {
         md: '16px',
         lg: '18px',
         xl: '30px',
-        '2xl': '38px'
+        '2xl': '38px',
+
     },
     fontWeights: {
         normal: 300,
@@ -128,6 +130,7 @@ export const localTheme = {
         12: '4.8rem',
         16: '6rem',
         20: '8rem',
+        24: '10rem',
         32: '12.8rem',
         40: '16rem',
         48: '19.2rem',
@@ -156,9 +159,17 @@ export const localTheme = {
     }
 }
 
-/**
- * For full infomration on availbe size and access see
- *
- * https://chakra-ui.com/theme
- *
- */
+export const pagePaddings = {
+    paddingLeft: {
+        xs: '2',
+        sm: '4',
+        md: '8',
+        base: '50'
+    },
+    paddingRight: {
+        xs: '2',
+        sm: '4',
+        md: '8',
+        base: '50'
+    },
+}

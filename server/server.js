@@ -21,6 +21,18 @@ app.prepare().then(() => {
         return app.render(req, res, '/index', req.query);
     })
 
+    server.get('/offerte', (req, res) => {
+        return app.render(req, res, '/offers', req.query);
+    })
+
+    server.get('/prodotti', (req, res) => {
+        return app.render(req, res, '/products', req.query);
+    })
+
+    server.get('/trattamenti', (req, res) => {
+        return app.render(req, res, '/treatments', req.query);
+    })
+
     // pass every get request through Next
     server.get('*', handle)
 

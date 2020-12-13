@@ -1,3 +1,5 @@
+import { pagePaddings } from "~/theme/theme"
+
 const styles = {
     header: {
         color: '#4B4B4B',
@@ -6,19 +8,8 @@ const styles = {
         width: '100%',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingLeft: {
-            xs: '2',
-            sm: '4',
-            md: '8',
-            base: '50'
-        },
-        paddingRight: {
-            xs: '2',
-            sm: '4',
-            md: '8',
-            base: '50'
-        },
         boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.25)',
+        ...pagePaddings
     },
     logo: {
         flexDirection: 'column',
@@ -118,7 +109,14 @@ const styles = {
             xs: 'normal',
             base: 'bold'
         },
-        fontSize: 'sm'
+        fontSize: 'sm',
+        textAlign: {
+            xs: 'center',
+            base: 'left'
+        },
+        p: {
+            base: '0'
+        }
     },
     navHeading: {
         display: {

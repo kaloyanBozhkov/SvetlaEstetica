@@ -10,6 +10,7 @@ import Layout from 'templates/LayoutBase'
 // Load components
 import Modal from 'components/Modal/Modal'
 import Header from 'components/Header/Header'
+import ShoppingArea from '~/domains/ShoppingArea/ShoppingArea'
 
 // Load actions
 import { closeModal } from 'redux/modal/modal.actions'
@@ -23,30 +24,44 @@ class App extends React.Component {
 
     toggleMenu = () => this.setState({ menuOpen: !this.state.menuOpen })
 
-    render() {
+    additionalPageWrappers = (children) => {
+        const { router: { pathname } } = this.props
 
+        if (['/offers', '/products', '/treatments'].includes(pathname)) {
+            return (<ShoppingArea activePath={pathname}>
+                {children}
+            </ShoppingArea>)
+        }
+
+        return children
+    }
+
+    render() {
         const {
             state: {
-
+                menuOpen
             },
             props: {
+                children,
                 modal = null
             },
-            onCloseModal = (f) => f
+            onCloseModal = (f) => f,
+            toggleMenu,
+            additionalPageWrappers
         } = this
 
         const header = (
             <Header
-                isMobileMenuOpen={this.state.menuOpen}
-                onToggleMobileMenu={this.toggleMenu}
+                isMobileMenuOpen={menuOpen}
+                onToggleMobileMenu={toggleMenu}
             />
         )
-            console.log(this.props)
+
         return (
             <>
                 {modal && <Modal {...modal} onCloseModal={onCloseModal} />}
-                <Layout header={header} isMobileMenuOpen={this.state.menuOpen}>
-                    {this.props.children}
+                <Layout header={header} isMobileMenuOpen={menuOpen}>
+                    {additionalPageWrappers(children)}
                 </Layout>
             </>
         )

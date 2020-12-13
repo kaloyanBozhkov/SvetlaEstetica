@@ -11,6 +11,13 @@ export default class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
+
+                    {/* @TODO Koko figure out why general.scss is not targeting #__next wrapper */}
+                    <style jsx global>{`
+                        #__next {
+                            height: 100%;
+                        }
+                    `}</style>
                 </body>
             </Html>
         )
