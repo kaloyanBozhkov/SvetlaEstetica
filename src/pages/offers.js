@@ -2,8 +2,14 @@ import React from 'react'
 
 // import store wrapper
 import { wrapper } from 'lib/store'
+
+// import Page
 import OffersPage from './Offers/Offers.page'
+
+// import components
 import Filter from '~/components/Filter/Filter'
+
+// import hooks
 import useControlFilter from '~/hooks/useControlFilter'
 
 const Offers = ({ pageProps, ...offersProps }) => {
@@ -44,9 +50,9 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
     console.log('offers getStaticProps', store)
 
     const categories = [
-        { id: '1', category: 'Viso' },
-        { id: '2', category: 'Cappelli' },
-        { id: '3', category: 'Corpo' }
+        { id: '1', category: 'Viso Offerte' },
+        { id: '2', category: 'Cappelli Offerte' },
+        { id: '3', category: 'Corpo Offerte' }
     ]
 
     return {

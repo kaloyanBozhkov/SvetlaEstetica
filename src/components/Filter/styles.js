@@ -21,9 +21,10 @@ const styles = {
     categorySelectWrapper: {
         w: {
             xs: '30rem',
-            base: 'auto'
+            base: '22rem'
         },
         gridTemplateColumns: '1fr 1fr',
+        justifyContent: 'flex-start',
         gap: '1rem',
         alignItems: 'center',
         margin: { 
@@ -44,6 +45,7 @@ const styles = {
         lineHeight: '18px',
         textAlign: 'left',
         padding: '0',
+        w: 'unset',
     },
     priceRangeWrapper: {
         w: {

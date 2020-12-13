@@ -2,12 +2,43 @@ import React from 'react'
 
 // import store wrapper
 import { wrapper } from 'lib/store'
+
+// import Page
 import ProductsPage from './Products/Products.page'
 
-const Products = (props) => {
-    
+// import components
+import Filter from '~/components/Filter/Filter'
+
+// import hooks
+import useControlFilter from '~/hooks/useControlFilter'
+
+const Products = ({ pageProps, ...productProps }) => {
+
+    const {
+        categories = [],
+        maxPrice = 100
+    } = pageProps
+
+    // controller for filter
+    const {
+        selectedCategory,
+        currentPrice,
+        setPriceRange,
+        setSelectedCategory
+    } = useControlFilter({ categories, maxPrice })
+
     return (
-        <ProductsPage {...props} />
+        <>
+            <Filter
+                categories={categories}
+                selectedCategory={selectedCategory}
+                maxPrice={maxPrice}
+                currentPrice={currentPrice}
+                setPriceRange={setPriceRange}
+                setSelectedCategory={setSelectedCategory}
+            />
+            <ProductsPage {...productProps} />
+        </>
     )
 }
 
@@ -15,17 +46,17 @@ const Products = (props) => {
 export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
     console.log('products getStaticProps', store)
 
-    // store.dispatch(openModal('someModal', { subtitle: 'ok' }))
-    // store.dispatch(END)
+    const categories = [
+        { id: '1', category: 'Viso' },
+        { id: '2', category: 'Solari' },
+        { id: '3', category: 'Corpo' }
+    ]
 
-    // if (!store.getState().placeholderData) {
-    //   store.dispatch(loadData())
-    // }
-
-
-    // await store.sagaTask.toPromise()
-
-    return {}
+    return {
+        props: {
+            categories
+        }
+    }
 })
 
 

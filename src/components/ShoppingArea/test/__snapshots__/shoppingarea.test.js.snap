@@ -19,6 +19,7 @@ exports[`testing shopping area wrapper should render component with default prop
       "xs": "2",
     }
   }
+  transition="background .4s"
 >
   <Flex
     display={
@@ -28,6 +29,7 @@ exports[`testing shopping area wrapper should render component with default prop
       }
     }
     justifyContent="space-between"
+    overflow="hidden"
     paddingBottom="3rem"
     paddingTop="3rem"
     w="100%"
@@ -38,6 +40,11 @@ exports[`testing shopping area wrapper should render component with default prop
       key="0"
     >
       <Button
+        _active={
+          Object {
+            "bg": "none",
+          }
+        }
         _hover={
           Object {
             "opacity": 0.6,
@@ -62,6 +69,11 @@ exports[`testing shopping area wrapper should render component with default prop
       key="1"
     >
       <Button
+        _active={
+          Object {
+            "bg": "none",
+          }
+        }
         _hover={
           Object {
             "opacity": 0.6,
@@ -86,6 +98,11 @@ exports[`testing shopping area wrapper should render component with default prop
       key="2"
     >
       <Button
+        _active={
+          Object {
+            "bg": "none",
+          }
+        }
         _hover={
           Object {
             "opacity": 0.6,
@@ -105,5 +122,6 @@ exports[`testing shopping area wrapper should render component with default prop
       </Button>
     </Link>
   </Flex>
+  <Flex />
 </Box>
 `;
