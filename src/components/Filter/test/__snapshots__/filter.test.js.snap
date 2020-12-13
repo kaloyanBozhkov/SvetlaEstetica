@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Filter should render component 1`] = `
+<Flex
+  color="white"
+  flexDir={
+    Object {
+      "base": "row",
+      "xs": "column",
+    }
+  }
+  fontSize="lg"
+  fontWeight="normal"
+  justifyContent="space-between"
+  lineHeight="tight"
+  marginTop="1rem"
+>
+  <Grid
+    alignItems="center"
+    gap="1rem"
+    gridTemplateColumns="1fr 1fr"
+  >
+    <Text>
+      Sto cercando
+    </Text>
+    <Select
+      background="none"
+      border="none"
+      borderBottom="1px solid"
+      borderRadius="0px"
+      color="white"
+      defaultValue={-1}
+      focusBorderColor="none"
+      fontWeight="medium"
+      h="24px"
+      iconSize="18px"
+      lineHeight="18px"
+      onChange={[Function]}
+      padding="0"
+      placeholder="Tutto"
+      textAlign="left"
+    />
+  </Grid>
+  <Grid
+    alignItems="center"
+    gap="1rem"
+    gridTemplateColumns="1fr minmax(12rem, 1fr)"
+    width="20rem"
+  >
+    <Text>
+      Prezzo
+    </Text>
+    <Slider
+      defaultValue={0}
+      max={0}
+      onChange={[Function]}
+    >
+      <SliderTrack>
+        <SliderFilledTrack
+          bg="white"
+        />
+      </SliderTrack>
+      <SliderThumb />
+    </Slider>
+  </Grid>
+</Flex>
+`;

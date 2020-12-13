@@ -38,6 +38,9 @@ const ShoppingArea = ({ activePath, children }) => {
                     </Link>
                 ))}
             </Flex>
+            <Flex>
+                
+            </Flex>
             {children}
         </Box>
     )

@@ -11,12 +11,16 @@ const link = {
     p: '0',
     _hover: {
         color: 'text.300'
-    }
+    },
+    _active: {
+        bg: 'none'
+    },
 }
 
 const styles = {
     common: {
         height: '100%',
+        transition: 'background .4s',
         ...pagePaddings
     },
     '/offers': {
@@ -36,7 +40,8 @@ const styles = {
         w: '100%',
         justifyContent: 'space-between',
         paddingTop: '3rem',
-        paddingBottom: '3rem'
+        paddingBottom: '3rem',
+        overflow: 'hidden'
     },
     activeLink: {
         ...link,

@@ -10,7 +10,7 @@ import Layout from 'templates/LayoutBase'
 // Load components
 import Modal from 'components/Modal/Modal'
 import Header from 'components/Header/Header'
-import ShoppingArea from '~/domains/ShoppingArea/ShoppingArea'
+import ShoppingArea from '~/components/ShoppingArea/ShoppingArea'
 
 // Load actions
 import { closeModal } from 'redux/modal/modal.actions'
