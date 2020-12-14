@@ -44,7 +44,8 @@ export const localTheme = {
         },
         background: {
             800: '#4B4B4B',
-            200: '#C1C1C1'
+            200: '#C1C1C1',
+            100: '#e4e4e4'
         },
         neutral: {
             900: '#4B4B4B',
@@ -60,7 +61,9 @@ export const localTheme = {
             700: '#8EC434'
         },
         red: {
-            900: '#D0021B'
+            900: '#D0021B',
+            350: '#D44469',
+            300: '#EA6587'
         },
         text: {
             900: '#4B4B4B',

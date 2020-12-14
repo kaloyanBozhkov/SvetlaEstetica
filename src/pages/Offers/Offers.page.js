@@ -1,9 +1,17 @@
+import { Flex } from '@chakra-ui/core'
 import React from 'react'
+import ProductArea from '~/components/ProductArea/ProductArea'
 
 
-const Offers = () => {
+const Offers = ({ offers = [] }) => {
     return (
-        <h1>Offers</h1>
+        <Flex>
+            {/* special product area */}
+            
+            <ProductArea items={offers} />
+
+            {/* pagination */}
+        </Flex>
     )
 }
 

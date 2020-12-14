@@ -16,7 +16,8 @@ const Offers = ({ pageProps, ...offersProps }) => {
 
     const {
         categories = [],
-        maxPrice = 100
+        maxPrice = 100,
+        offers
     } = pageProps
 
     // controller for filter
@@ -40,7 +41,7 @@ const Offers = ({ pageProps, ...offersProps }) => {
                 setPriceRange={setPriceRange}
                 setSelectedCategory={setSelectedCategory}
             />
-            <OffersPage {...offersProps} />
+            <OffersPage offers={offers} {...offersProps} />
         </>
     )
 }
@@ -55,9 +56,21 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
         { id: '3', category: 'Corpo Offerte' }
     ]
 
+    const offers = [
+        {
+            id: 'offer-1',
+            title: 'some product title',
+            price: '19.99',
+            currency: '$',
+            description: 'some description for product',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+        }
+    ]
+
     return {
         props: {
-            categories
+            categories,
+            offers
         }
     }
 })
