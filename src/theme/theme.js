@@ -147,6 +147,7 @@ export const localTheme = {
         auto: 'auto',
         base: 0,
         docked: 10,
+        header: 900,
         dropdown: 1000,
         sticky: 1100,
         banner: 1200,

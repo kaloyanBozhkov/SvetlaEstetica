@@ -4,7 +4,8 @@ const styles = {
         minWidth: '19.5rem',
         minHeight: '30rem',
         w: '100%',
-        h: '100%'
+        h: '100%',
+        boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.25)',
     },
     description: {
         minHeight: '8.5rem',

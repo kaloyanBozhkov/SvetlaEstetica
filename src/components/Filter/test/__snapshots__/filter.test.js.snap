@@ -26,10 +26,8 @@ exports[`testing Filter should render component 1`] = `
     }
   }
 >
-  <Grid
+  <Flex
     alignItems="center"
-    gap="1rem"
-    gridTemplateColumns="1fr 1fr"
     justifyContent="flex-start"
     margin={
       Object {
@@ -37,20 +35,15 @@ exports[`testing Filter should render component 1`] = `
         "xs": "1rem",
       }
     }
-    w={
-      Object {
-        "base": "22rem",
-        "xs": "30rem",
-      }
-    }
   >
-    <Text>
+    <Text
+      marginRight="1rem"
+    >
       Sto cercando
     </Text>
     <Select
       background="none"
       border="none"
-      borderBottom="1px solid"
       borderRadius="0px"
       color="white"
       defaultValue={-1}
@@ -60,12 +53,17 @@ exports[`testing Filter should render component 1`] = `
       iconSize="18px"
       lineHeight="18px"
       onChange={[Function]}
-      padding="0"
+      paddingLeft="0"
       placeholder="Tutto"
+      rootProps={
+        Object {
+          "borderBottom": "1px solid",
+          "w": "unset",
+        }
+      }
       textAlign="left"
-      w="unset"
     />
-  </Grid>
+  </Flex>
   <Grid
     alignItems="center"
     gap="1rem"

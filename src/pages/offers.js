@@ -6,12 +6,6 @@ import { wrapper } from 'lib/store'
 // import Page
 import OffersPage from './Offers/Offers.page'
 
-// import components
-import Filter from '~/components/Filter/Filter'
-
-// import hooks
-import useControlFilter from '~/hooks/useControlFilter'
-
 const Offers = ({ pageProps, ...offersProps }) => {
 
     const {
@@ -20,29 +14,13 @@ const Offers = ({ pageProps, ...offersProps }) => {
         offers
     } = pageProps
 
-    // controller for filter
-    const {
-        selectedCategory,
-        currentPrice,
-        setPriceRange,
-        setSelectedCategory
-    } = useControlFilter({ categories, maxPrice })
-
-
-    // apply filtering to products to show by passing down to offers page
-
     return (
-        <>
-            <Filter
-                categories={categories}
-                selectedCategory={selectedCategory}
-                maxPrice={maxPrice}
-                currentPrice={currentPrice}
-                setPriceRange={setPriceRange}
-                setSelectedCategory={setSelectedCategory}
-            />
-            <OffersPage offers={offers} {...offersProps} />
-        </>
+        <OffersPage 
+            offers={offers} 
+            categories={categories} 
+            maxPrice={maxPrice} 
+            {...offersProps} 
+        />
     )
 }
 
@@ -57,6 +35,54 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
     ]
 
     const offers = [
+        {
+            id: 'offer-1',
+            title: 'some product title',
+            price: '19.99',
+            currency: '$',
+            description: 'some description for product',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+        },
+        {
+            id: 'offer-1',
+            title: 'some product title',
+            price: '19.99',
+            currency: '$',
+            description: 'some description for product',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+        },
+        {
+            id: 'offer-1',
+            title: 'some product title',
+            price: '19.99',
+            currency: '$',
+            description: 'some description for product',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+        },
+        {
+            id: 'offer-1',
+            title: 'some product title',
+            price: '19.99',
+            currency: '$',
+            description: 'some description for product',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+        },
+        {
+            id: 'offer-1',
+            title: 'some product title',
+            price: '19.99',
+            currency: '$',
+            description: 'some description for product',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+        },
+        {
+            id: 'offer-1',
+            title: 'some product title',
+            price: '19.99',
+            currency: '$',
+            description: 'some description for product',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+        },
         {
             id: 'offer-1',
             title: 'some product title',

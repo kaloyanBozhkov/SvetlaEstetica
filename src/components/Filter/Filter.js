@@ -6,8 +6,8 @@ import styles from './styles'
 const Filter = ({ categories = [], maxPrice = 0, currentPrice = 0, selectedCategory = -1, setSelectedCategory = (f) => f, setPriceRange = (f) => f }) => {
     return (
         <Flex {...styles.filter}>
-            <Grid {...styles.categorySelectWrapper}>
-                <Text>Sto cercando</Text>
+            <Flex {...styles.categorySelectWrapper}>
+                <Text {...styles.categorySelectText}>Sto cercando</Text>
                 <Select
                     defaultValue={selectedCategory}
                     placeholder="Tutto"
@@ -18,7 +18,7 @@ const Filter = ({ categories = [], maxPrice = 0, currentPrice = 0, selectedCateg
                         <option value={id} key={id}>{category}</option>
                     ))}
                 </Select>
-            </Grid>
+            </Flex>
             <Grid {...styles.priceRangeWrapper}>
                 <Text>Prezzo</Text>
                 <Slider defaultValue={currentPrice} max={maxPrice} onChange={setPriceRange}>

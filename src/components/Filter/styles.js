@@ -19,40 +19,44 @@ const styles = {
         }
     },
     categorySelectWrapper: {
-        w: {
-            xs: '30rem',
-            base: '22rem'
-        },
-        gridTemplateColumns: '1fr 1fr',
+        // w: {
+        //     xs: '30rem',
+        //     base: '22rem'
+        // },
+
         justifyContent: 'flex-start',
-        gap: '1rem',
         alignItems: 'center',
-        margin: { 
+        margin: {
             xs: '1rem',
             base: '0'
         }
+    },
+    categorySelectText: {
+        marginRight: '1rem'
     },
     selectCategory: {
         background: 'none',
         border: 'none',
         focusBorderColor: 'none',
         borderRadius: '0px',
-        borderBottom: '1px solid',
         color: 'white',
         h: '24px',
         iconSize: '18px',
         fontWeight: 'medium',
         lineHeight: '18px',
         textAlign: 'left',
-        padding: '0',
-        w: 'unset',
+        paddingLeft: '0',
+        rootProps: {
+            borderBottom: '1px solid',
+            w: 'unset',
+        }
     },
     priceRangeWrapper: {
         w: {
             xs: '30rem',
             base: '18.5rem'
         },
-        margin: { 
+        margin: {
             xs: '1rem',
             base: '0'
         },

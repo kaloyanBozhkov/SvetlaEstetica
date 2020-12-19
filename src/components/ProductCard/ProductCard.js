@@ -7,7 +7,7 @@ import styles from './styles'
 import Loading from 'UI/Loading/Loading'
 import { actionBtn } from '~/theme/components/button'
 
-const ProductCard = ({ title, price, currency, imgSrc, onAddToCart = (f) => f }) => {
+const ProductCard = ({ title, price, description, currency, imgSrc, onAddToCart = (f) => f }) => {
 
     const [isLoading, setLoading] = useState(true)
     const [hasError, setError] = useState(false)

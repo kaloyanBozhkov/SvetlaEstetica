@@ -2,7 +2,7 @@
 
 exports[`testing product area should render component 1`] = `
 <Grid
-  gap="2rem"
+  gap="4rem 2rem"
   gridTemplateColumns={
     Object {
       "base": "repeat(4, 1fr)",
@@ -10,7 +10,7 @@ exports[`testing product area should render component 1`] = `
       "xs": "1fr",
     }
   }
-  gridTemplateRows="31rem"
+  gridTemplateRows="32rem"
   marginTop="3rem"
   w="100%"
 />
