@@ -29,9 +29,9 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
     console.log('offers getStaticProps', store)
 
     const categories = [
-        { id: '1', category: 'Viso Offerte' },
-        { id: '2', category: 'Cappelli Offerte' },
-        { id: '3', category: 'Corpo Offerte' }
+        { id: 1, category: 'Viso Offerte' },
+        { id: 2, category: 'Cappelli Offerte' },
+        { id: 3, category: 'Corpo Offerte' }
     ]
 
     const offers = [
@@ -41,7 +41,8 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            category: 1
         },
         {
             id: 'offer-1',
@@ -49,7 +50,8 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            category: 1
         },
         {
             id: 'offer-1',
@@ -57,7 +59,8 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            category: 1
         },
         {
             id: 'offer-1',
@@ -65,7 +68,8 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            category: 1
         },
         {
             id: 'offer-1',
@@ -73,7 +77,8 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            category: 2
         },
         {
             id: 'offer-1',
@@ -81,7 +86,8 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            category: 2
         },
         {
             id: 'offer-1',
@@ -89,7 +95,8 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg'
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            category: 3
         }
     ]
 

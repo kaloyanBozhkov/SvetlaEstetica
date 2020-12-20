@@ -12,7 +12,7 @@ const Filter = ({ categories = [], maxPrice = 0, currentPrice = 0, selectedCateg
                     defaultValue={selectedCategory}
                     placeholder="Tutto"
                     {...styles.selectCategory}
-                    onChange={({ target: { value } }) => setSelectedCategory(value)}
+                    onChange={({ target: { value } }) => setSelectedCategory(value === '' ? -1 : parseInt(value))}
                 >
                     {categories.map(({ category, id }) => (
                         <option value={id} key={id}>{category}</option>

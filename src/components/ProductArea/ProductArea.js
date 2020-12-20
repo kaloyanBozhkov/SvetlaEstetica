@@ -7,8 +7,8 @@ const ProductArea = ({ items = [], ...gridStyleProps}) => {
     return (
         <Grid {...styles.productArea} {...gridStyleProps}>
             {items.map((item, index) => (
-                <PseudoBox {...styles.producetWrapper}>
-                    <ProductCard {...item} key={index} />
+                <PseudoBox {...styles.producetWrapper} key={index}>
+                    <ProductCard {...item} />
                 </PseudoBox>
             ))}
         </Grid>
