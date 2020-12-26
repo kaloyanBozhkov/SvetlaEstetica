@@ -1,9 +1,51 @@
 import React from 'react'
+import { Flex } from '@chakra-ui/core'
+
+// import components
+import Filter from '~/components/Filter/Filter'
+import ProductArea from '~/components/ProductArea/ProductArea'
+
+// import helpers
+import filterItems from '~/helpers/filterItems'
+
+// import hooks
+import useControlFilter from '~/hooks/useControlFilter'
 
 
-const Treatments = () => {
+const Treatments = ({ treatments, categories, maxPrice, minPrice, currency }) => {
+
+     // controller for filter
+     const {
+        activeFilter,
+        setActiveFilter,
+        filters,
+        filterConfigs,
+        chosenFilters,
+        clearFilters
+    } = useControlFilter({ categories, maxPrice, minPrice, currency })
+
+
+    // apply filter cretiria to items arr
+    const filteredItems = filterItems({ items: treatments, ...filters })
+    console.log(filters)
+
     return (
-        <h1>Treatments</h1>
+        <>
+            <Filter
+                filterConfigs={filterConfigs}
+                activeFilter={activeFilter}
+                setActiveFilter={setActiveFilter}
+                chosenFilters={chosenFilters}
+                clearFilters={clearFilters}
+            />
+            <Flex>
+                {/* special product area */}
+
+                <ProductArea items={filteredItems} />
+
+                {/* pagination */}
+            </Flex>
+        </>
     )
 }
 

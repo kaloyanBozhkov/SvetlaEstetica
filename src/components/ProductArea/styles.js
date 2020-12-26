@@ -8,7 +8,7 @@ const styles = {
             md: 'repeat(2, 1fr)',
             base: 'repeat(4, 1fr)'
         },
-        gridTemplateRows: '32rem'
+        gridTemplateRows: '46rem'
     },
     producetWrapper: {
         transformOrigin: 'center',

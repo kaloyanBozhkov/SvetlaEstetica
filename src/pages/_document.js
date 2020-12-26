@@ -1,13 +1,24 @@
 import React from 'react'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-import 'theme/general.scss'
-
 export default class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <Head />
+                <Head>
+                    <link
+                        rel="preload"
+                        href="/fonts/Sansation_Light.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/Sansation_Regular.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />

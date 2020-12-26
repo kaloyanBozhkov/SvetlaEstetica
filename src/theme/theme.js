@@ -50,10 +50,11 @@ export const localTheme = {
         neutral: {
             900: '#4B4B4B',
             800: '',
-            700: '',
+            700: '#b1b1b1',
             600: '',
             500: '',
-            400: ''
+            400: '',
+            200: '#f5f5f5'
         },
         green: {
             900: '#0EE56F',
@@ -92,7 +93,8 @@ export const localTheme = {
     fontWeights: {
         normal: 300,
         medium: 400,
-        bold: 700
+        bold: 700,
+        bolder: 900
     },
     lineHeights: {
         tighter: '18px',
@@ -159,7 +161,7 @@ export const localTheme = {
         tooltip: 1800,
     },
     shadows: {
-
+        cute: '0px 2px 2px rgba(0, 0, 0, 0.15)'
     }
 }
 

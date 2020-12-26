@@ -6,39 +6,25 @@ import { wrapper } from 'lib/store'
 // import Page
 import TreatmentsPage from './Treatments/Treatments.page'
 
-// import components
-import Filter from '~/components/Filter/Filter'
-
-// import hooks
-import useControlFilter from '~/hooks/useControlFilter'
-
 const Treatments = ({ pageProps, ...treatmentsProps }) => {
 
     const {
         categories = [],
-        maxPrice = 100
+        maxPrice = 100,
+        minPrice = 0.5,
+        currency,
+        treatments
     } = pageProps
 
-    // controller for filter
-    const {
-        selectedCategory,
-        currentPrice,
-        setPriceRange,
-        setSelectedCategory
-    } = useControlFilter({ categories, maxPrice })
-
     return (
-        <>
-            <Filter
-                categories={categories}
-                selectedCategory={selectedCategory}
-                maxPrice={maxPrice}
-                currentPrice={currentPrice}
-                setPriceRange={setPriceRange}
-                setSelectedCategory={setSelectedCategory}
-            />
-            <TreatmentsPage {...treatmentsProps} />
-        </>
+        <TreatmentsPage
+            treatments={treatments}
+            categories={categories}
+            maxPrice={maxPrice}
+            minPrice={minPrice}
+            currency={currency}
+            {...treatmentsProps}
+        />
     )
 }
 
@@ -46,15 +32,23 @@ const Treatments = ({ pageProps, ...treatmentsProps }) => {
 export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
     console.log('treatments getStaticProps', store)
 
+    const maxPrice = 100
+    const minPrice = 0
+    const currency = '€'
     const categories = [
         { id: '1', category: 'Make Up' },
         { id: '2', category: 'Ceretta' },
         { id: '3', category: 'Solarium' }
     ]
 
+    const treatments = []
     return {
         props: {
-            categories
+            currency,
+            categories,
+            minPrice,
+            maxPrice,
+            treatments
         }
     }
 })

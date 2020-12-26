@@ -1,68 +1,87 @@
 const styles = {
-    filter: {
-        flexDir: {
-            xs: 'column',
-            base: 'row'
-        },
-        justifyContent: 'space-between',
-        alignItems: {
-            xs: 'center',
-            base: 'stretch',
-        },
+    wrapper: {
         color: 'white',
-        fontSize: 'lg',
-        fontWeight: 'normal',
-        lineHeight: 'tight',
-        marginTop: {
-            xs: '2rem',
-            base: '1rem'
-        }
+        fontSize: 'md'
     },
-    categorySelectWrapper: {
-        // w: {
-        //     xs: '30rem',
-        //     base: '22rem'
-        // },
-
-        justifyContent: 'flex-start',
+    filtersWrapper: {
         alignItems: 'center',
-        margin: {
-            xs: '1rem',
-            base: '0'
+        gap: '1rem',
+        position: 'relative',
+    },
+    filterBtn: {
+        d: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        transition: 'all 0.3s',
+        cursor: 'pointer',
+        h: 'auto',
+        p: '1rem',
+        fontWeight: 'bold',
+        bg: 'unset',
+    },
+    filterBtnInactive: {
+        _hover: {
+            bg: 'rgba(245, 245, 245, 0.28)'
         }
     },
-    categorySelectText: {
+    filtrBtnActive: {
+        color: 'neutral.900',
+        bg: 'white',
+        _hover: {
+            bg: 'white'
+        }
+    },
+    filterBtnIcon: {
+        transformOrigin: 'center',
+        transition: 'transform 0.3s',
+        marginLeft: '0.5rem',
+    },
+    filterOverlay: {
+        position: 'absolute',
+        top: '100%',
+        left: '0',
+        right: '0',
+        bg: 'white',
+        color: 'neutral.900',
+        minH: '5rem',
+        alignItems: 'center',
+        padding: '1.5rem 2.5rem',
+        zIndex: 'banner',
+        borderRadius: '3px',
+        boxShadow: 'cute'
+    },
+    selectedFilters: {
+        marginTop: '1rem',
+        gap: '1rem',
+        alignItems: 'center'
+    },
+    chosenFilterBtn: {
+        boxShadow: 'cute',
+        bg: 'white',
+        color: 'neutral.900',
+        h: 'auto',
+        p: '0.5rem'
+    },
+    chosenFilterInfo: {
+        flexDir: 'column',
+        alignItems: 'flex-start',
         marginRight: '1rem'
     },
-    selectCategory: {
-        background: 'none',
-        border: 'none',
-        focusBorderColor: 'none',
-        borderRadius: '0px',
-        color: 'white',
-        h: '24px',
-        iconSize: '18px',
-        fontWeight: 'medium',
-        lineHeight: '18px',
-        textAlign: 'left',
-        paddingLeft: '0',
-        rootProps: {
-            borderBottom: '1px solid',
-            w: 'unset',
-        }
+    chosenFilterInfoTitle: {
+        fontSize: 'xs',
     },
-    priceRangeWrapper: {
-        w: {
-            xs: '30rem',
-            base: '18.5rem'
-        },
-        margin: {
-            xs: '1rem',
-            base: '0'
-        },
-        gridTemplateColumns: '1fr minmax(12rem, 1fr)',
-        gap: '1rem',
-        alignItems: 'center',
+    chosenFilterInfoValue: {
+        fontSize: 'md',
+        fontWeight: 'bold'
+    },
+    clearAllFilters: {
+        fontSize: 'sm',
+        p: '0',
+        bg: 'none',
+        marginLeft: '1rem',
+        _hover: {
+            bg: 'none'
+        }
     }
 }
 

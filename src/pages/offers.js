@@ -11,7 +11,9 @@ const Offers = ({ pageProps, ...offersProps }) => {
     const {
         categories = [],
         maxPrice = 100,
-        offers
+        minPrice = 0.5,
+        currency,
+        offers,
     } = pageProps
 
     return (
@@ -19,6 +21,8 @@ const Offers = ({ pageProps, ...offersProps }) => {
             offers={offers} 
             categories={categories} 
             maxPrice={maxPrice} 
+            minPrice={minPrice}
+            currency={currency}
             {...offersProps} 
         />
     )
@@ -28,6 +32,9 @@ const Offers = ({ pageProps, ...offersProps }) => {
 export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
     console.log('offers getStaticProps', store)
 
+    const maxPrice = 100
+    const minPrice = 0
+    const currency = '€'
     const categories = [
         { id: 1, category: 'Viso Offerte' },
         { id: 2, category: 'Cappelli Offerte' },
@@ -103,7 +110,10 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
     return {
         props: {
             categories,
-            offers
+            currency,
+            offers,
+            minPrice, 
+            maxPrice
         }
     }
 })

@@ -1,38 +1,40 @@
-import { Flex } from '@chakra-ui/core'
 import React from 'react'
+import { Flex } from '@chakra-ui/core'
 
 // import components
 import Filter from '~/components/Filter/Filter'
 import ProductArea from '~/components/ProductArea/ProductArea'
+
+// import helpers
 import filterItems from '~/helpers/filterItems'
 
 // import hooks
 import useControlFilter from '~/hooks/useControlFilter'
 
-const Offers = ({ maxPrice, categories = [], offers = [] }) => {
+const Offers = ({ maxPrice, minPrice, currency, categories = [], offers = [] }) => {
 
     // controller for filter
     const {
-        selectedCategory,
-        currentPrice,
-        setPriceRange,
-        setSelectedCategory
-    } = useControlFilter({ categories, maxPrice })
+        activeFilter,
+        setActiveFilter,
+        filters,
+        filterConfigs,
+        chosenFilters,
+        clearFilters
+    } = useControlFilter({ categories, maxPrice, minPrice, currency })
 
 
     // apply filter cretiria to items arr
-    const filteredItems = filterItems({ items: offers, selectedCategory, maxPrice: currentPrice })
-    console.log(categories, selectedCategory,
-        currentPrice)
+    const filteredItems = filterItems({ items: offers, ...filters })
+    console.log(filters)
     return (
         <>
             <Filter
-                categories={categories}
-                selectedCategory={selectedCategory}
-                maxPrice={maxPrice}
-                currentPrice={currentPrice}
-                setPriceRange={setPriceRange}
-                setSelectedCategory={setSelectedCategory}
+                filterConfigs={filterConfigs}
+                activeFilter={activeFilter}
+                setActiveFilter={setActiveFilter}
+                chosenFilters={chosenFilters}
+                clearFilters={clearFilters}
             />
             <Flex>
                 {/* special product area */}

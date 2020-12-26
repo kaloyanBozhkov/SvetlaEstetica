@@ -1,11 +1,15 @@
 @import './mixins.scss';
 @font-face {
     font-family: 'SensationLight';
-    src: local('SensationLight'), url('./fonts/Sansation_Light.ttf') format('truetype');
+    src: local('SensationLight'), url('/fonts/Sansation_Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: 'SensationRegular';
-    src: local('SensationRegular'), url('./fonts/Sansation_Regular.ttf') format('truetype');
+    src: local('SensationRegular'), url('/fonts/Sansation_Regular.ttf') format('truetype');
+    font-style: bold;
+    font-weight: 700;
 }
 
 html {
@@ -13,7 +17,6 @@ html {
     font-size: 62.5%; // 10px / 16px = 62.5% *
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-
     // Example of how we could handle resizing the entire app just by handling the root font size from here :)
 
     // @include breakpoint(tablet-landscape) {
@@ -41,4 +44,10 @@ body,
     height: 100%;
     width: 100%;
     overflow: auto;
+}
+
+select {
+    option {
+        color: #4B4B4B
+    }
 }
