@@ -11,7 +11,7 @@ const styles = {
         minHeight: '8.5rem',
         bg: 'white',
         flexDir: 'column',
-        p: '1rem'
+        p: '1rem',
     },
     descriptionTitle: {
         fontWeight: 'bold',
@@ -24,7 +24,7 @@ const styles = {
         flex: '1',
         flexDir: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     price: {
         lineHeight: 'tighter',
@@ -32,12 +32,34 @@ const styles = {
     },
     topArea: {
         flex: '1',
+        overflow: 'hidden',
         position: 'relative',
+        bg: 'background.100',
     },
     imgWrapper: {
-        bg: 'background.100',
         height: '100%',
-    }
+        position: 'relative',
+    },
+    img: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        height: '100%',
+        width: 'auto',
+        zIndex: 'based',
+    },
+    backgroundImage: {
+        h: '100%',
+        w: '100%',
+        zIndex: 'base',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        style: {
+            filter: 'blur(10px)'
+        }
+    },
 }
 
 export default styles

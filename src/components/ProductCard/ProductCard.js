@@ -19,9 +19,11 @@ const ProductCard = ({ title, price, description, currency, imgSrc, onAddToCart 
                     {isLoading && <Loading data-test-id="loadingOverlay" loadingMsg="Loading image.." isAbsolutelyPositioned />}
                     {hasError && <Text data-testid="errorMsg" {...styles.errorMsg}>Oops! Immagine non caricata, prova piu' tardi.</Text>}
                     <Image
+                        {...styles.img}
                         src={imgSrc}
                         alt="Img"
                         fallback="fallbackImgUrl"
+                        
                         onError={() => setError(true)}
                         onLoad={() => setLoading(false)}
 
@@ -32,6 +34,7 @@ const ProductCard = ({ title, price, description, currency, imgSrc, onAddToCart 
                         display={hasError ? 'none' : null}
                     />
                 </Flex>
+                <Box {...styles.backgroundImage} backgroundImage={!isLoading && !hasError && `url(${imgSrc})`} />
             </Box>
             <Flex {...styles.description}>
                 <Text {...styles.descriptionTitle}>{title}</Text>

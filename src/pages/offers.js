@@ -48,7 +48,7 @@ export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
             price: '19.99',
             currency: '$',
             description: 'some description for product',
-            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/mr.jpg',
+            imgSrc: 'https://www.svetlaestetica.com/img/trattamenti/faat.jpg',
             category: 1
         },
         {

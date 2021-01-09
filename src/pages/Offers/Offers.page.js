@@ -26,7 +26,7 @@ const Offers = ({ maxPrice, minPrice, currency, categories = [], offers = [] }) 
 
     // apply filter cretiria to items arr
     const filteredItems = filterItems({ items: offers, ...filters, categories })
-    console.log(filters)
+    console.log(filterConfigs)
     return (
         <>
             <Filter

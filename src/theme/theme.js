@@ -148,6 +148,7 @@ export const localTheme = {
         hide: -1,
         auto: 'auto',
         base: 0,
+        based: 1,
         docked: 10,
         header: 900,
         dropdown: 1000,
@@ -170,12 +171,16 @@ export const pagePaddings = {
         xs: '2',
         sm: '4',
         md: '8',
-        base: '50'
+        mdX: '8',
+        base: '40',
+        lg: '50'
     },
     paddingRight: {
         xs: '2',
         sm: '4',
         md: '8',
-        base: '50'
+        mdX: '8',
+        base: '40',
+        lg: '50'
     },
 }

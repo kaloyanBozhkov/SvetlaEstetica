@@ -6,9 +6,11 @@ const styles = {
         gridTemplateColumns: {
             xs: '1fr',
             md: 'repeat(2, 1fr)',
-            base: 'repeat(4, 1fr)'
+            mdX: 'repeat(3, 1fr)',
+            base: 'repeat(4, 1fr)',
+            lg: 'repeat(5, 1fr)'
         },
-        gridTemplateRows: '46rem'
+        autoRows: '40rem'
     },
     producetWrapper: {
         transformOrigin: 'center',
@@ -16,8 +18,8 @@ const styles = {
         transform: 'scale(1)',
         _hover: {
             transform: 'scale(0.98)',
-        }
-    }
+        },
+    },
 }
 
 export default styles
