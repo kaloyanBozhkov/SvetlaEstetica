@@ -6,8 +6,12 @@ import { SliderRail, Handle, Track } from './components'
 
 import styles from './styles'
 
-const PriceRange = ({ maxPrice = 0, minPrice = 0, priceRange = [0, 0], setPriceRange = (f) => f }) => {
-
+const PriceRange = ({
+    maxPrice = 0,
+    minPrice = 0,
+    priceRange = [0, 0],
+    setPriceRange = (f) => f,
+}) => {
     const domain = [minPrice, maxPrice]
 
     return (
@@ -22,7 +26,9 @@ const PriceRange = ({ maxPrice = 0, minPrice = 0, priceRange = [0, 0], setPriceR
                 values={priceRange}
             >
                 <Rail>
-                    {({ getRailProps }) => <SliderRail getRailProps={getRailProps} />}
+                    {({ getRailProps }) => (
+                        <SliderRail getRailProps={getRailProps} />
+                    )}
                 </Rail>
                 <Handles>
                     {({ handles, getHandleProps }) => (
@@ -63,7 +69,7 @@ PriceRange.propTypes = {
     currentMaxPrice: PropTypes.number,
     currentMinPrice: PropTypes.number,
     setMaxPrice: PropTypes.func,
-    setMinPrice: PropTypes.func
+    setMinPrice: PropTypes.func,
 }
 
 export default PriceRange

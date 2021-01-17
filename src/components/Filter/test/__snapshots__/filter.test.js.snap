@@ -1,101 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`testing Filter should render component 1`] = `
-<Flex
-  alignItems={
-    Object {
-      "base": "stretch",
-      "xs": "center",
-    }
-  }
+<Box
   color="white"
-  flexDir={
-    Object {
-      "base": "row",
-      "xs": "column",
-    }
-  }
-  fontSize="lg"
-  fontWeight="normal"
-  justifyContent="space-between"
-  lineHeight="tight"
-  marginTop={
-    Object {
-      "base": "1rem",
-      "xs": "2rem",
-    }
-  }
+  fontSize="md"
 >
-  <Flex
-    alignItems="center"
-    justifyContent="flex-start"
-    margin={
-      Object {
-        "base": "0",
-        "xs": "1rem",
-      }
-    }
-  >
-    <Text
-      marginRight="1rem"
-    >
-      Sto cercando
-    </Text>
-    <Select
-      background="none"
-      border="none"
-      borderRadius="0px"
-      color="white"
-      defaultValue={-1}
-      focusBorderColor="none"
-      fontWeight="medium"
-      h="24px"
-      iconSize="18px"
-      lineHeight="18px"
-      onChange={[Function]}
-      paddingLeft="0"
-      placeholder="Tutto"
-      rootProps={
-        Object {
-          "borderBottom": "1px solid",
-          "w": "unset",
-        }
-      }
-      textAlign="left"
-    />
-  </Flex>
   <Grid
     alignItems="center"
     gap="1rem"
-    gridTemplateColumns="1fr minmax(12rem, 1fr)"
-    margin={
-      Object {
-        "base": "0",
-        "xs": "1rem",
-      }
-    }
-    w={
-      Object {
-        "base": "18.5rem",
-        "xs": "30rem",
-      }
-    }
+    gridTemplateColumns="repeat(1, max-content)"
+    position="relative"
   >
     <Text>
-      Prezzo
+      Filtri:
     </Text>
-    <Slider
-      defaultValue={0}
-      max={0}
-      onChange={[Function]}
-    >
-      <SliderTrack>
-        <SliderFilledTrack
-          bg="white"
-        />
-      </SliderTrack>
-      <SliderThumb />
-    </Slider>
   </Grid>
-</Flex>
+</Box>
 `;

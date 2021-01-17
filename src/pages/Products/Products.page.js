@@ -9,9 +9,9 @@ import ProductArea from '~/components/ProductArea/ProductArea'
 import filterItems from '~/helpers/filterItems'
 
 // import hooks
-import useControlFilter from '~/hooks/useControlFilter'
+import useControlFilter from '~/hooks/Filter/useControlFilter'
 
-const Products = ({ treatments, categories, maxPrice, minPrice, currency }) => {
+const Products = ({ products, categories, maxPrice, minPrice, currency }) => {
 
     // controller for filter
     const {
@@ -23,10 +23,8 @@ const Products = ({ treatments, categories, maxPrice, minPrice, currency }) => {
         clearFilters
     } = useControlFilter({ categories, maxPrice, minPrice, currency })
 
-
     // apply filter cretiria to items arr
-    const filteredItems = filterItems({ items: treatments, ...filters })
-    console.log(filters)
+    const filteredItems = filterItems({ items: products, ...filters })
 
     return (
         <>

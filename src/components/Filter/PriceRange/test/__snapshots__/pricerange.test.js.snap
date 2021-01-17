@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing price range should render component with default props 1`] = `
+<Flex
+  alignItems="center"
+  h="2.5rem"
+  minW="30rem"
+>
+  <Text
+    fontSize="lg"
+    fontWeight="bold"
+    w="20rem"
+  >
+    0,0
+  </Text>
+  <Slider
+    domain={
+      Array [
+        0,
+        0,
+      ]
+    }
+    mode={3}
+    onChange={[Function]}
+    rootStyle={
+      Object {
+        "position": "relative",
+        "width": "100%",
+      }
+    }
+    step={1}
+    values={
+      Array [
+        0,
+        0,
+      ]
+    }
+  >
+    <Rail>
+      <Component />
+    </Rail>
+    <Handles>
+      <Component />
+    </Handles>
+    <Tracks
+      left={false}
+      right={false}
+    >
+      <Component />
+    </Tracks>
+  </Slider>
+</Flex>
+`;

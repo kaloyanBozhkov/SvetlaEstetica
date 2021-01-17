@@ -9,7 +9,7 @@ import ProductArea from '~/components/ProductArea/ProductArea'
 import filterItems from '~/helpers/filterItems'
 
 // import hooks
-import useControlFilter from '~/hooks/useControlFilter'
+import useControlFilter from '~/hooks/Filter/useControlFilter'
 
 
 const Treatments = ({ treatments, categories, maxPrice, minPrice, currency }) => {

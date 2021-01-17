@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing footer component should render with default props 1`] = `
+<Flex>
+  <Flex>
+    <Text />
+    <Text />
+    <Link
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "Text",
+          "render": [Function],
+        }
+      }
+      href=""
+    />
+  </Flex>
+  <Flex>
+    <Text>
+      Supporto
+    </Text>
+  </Flex>
+</Flex>
+`;

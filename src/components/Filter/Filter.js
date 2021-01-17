@@ -16,7 +16,7 @@ const Filter = ({
     clearFilters,
 }) => {
 
-    // if activeFilter str set then get the component to render int he filer overlay
+    // if activeFilter str set then get the component to render in the filer overlay
     const FilterComponent = filterConfigs.find(({ label }) => activeFilter === label)?.component || null
 
     return (

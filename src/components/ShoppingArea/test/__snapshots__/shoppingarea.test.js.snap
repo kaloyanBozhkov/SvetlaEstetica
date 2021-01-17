@@ -5,16 +5,20 @@ exports[`testing shopping area wrapper should render component with default prop
   height="100%"
   paddingLeft={
     Object {
-      "base": "50",
+      "base": "40",
+      "lg": "50",
       "md": "8",
+      "mdX": "8",
       "sm": "4",
       "xs": "2",
     }
   }
   paddingRight={
     Object {
-      "base": "50",
+      "base": "40",
+      "lg": "50",
       "md": "8",
+      "mdX": "8",
       "sm": "4",
       "xs": "2",
     }
